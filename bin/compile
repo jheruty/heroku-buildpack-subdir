@@ -27,7 +27,7 @@ for BUILDPACK in $(cat $1/.buildpacks); do
   subdir_uppercase="${subdir^^}"
   buildpack_dir_env_variable_name=BUILDPACK_DIR_$subdir_uppercase
   export $buildpack_dir_env_variable_name=$dir
-  echo "Adding env variable $buildpack_dir_env_variable_name=$dir";
+  echo "=====> Adding env variable $buildpack_dir_env_variable_name=$dir";
 
   url=${BUILDPACK%#*}
   branch=${BUILDPACK#*#}
